@@ -1,6 +1,6 @@
-import { Atom } from './Atom';
+import { Atom } from './atom';
 
-type AtomListener<T> = (cur: T, prev: T) => any;
+export type AtomListener<T> = (cur: T, prev: T) => any;
 
 let atomId = 0;
 const atomState: Record<number, any> = {};

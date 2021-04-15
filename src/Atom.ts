@@ -1,6 +1,7 @@
-import { getState, setState, uuid, subscribe, notify } from './cache';
+import { AtomListener, setState, uuid } from './cache';
+import { view, subscribe, set, merge, modify } from './operators';
 
-class Atom<T> {
+export class Atom<T> {
   readonly id: number;
 
   static of<S>(value: S): Atom<S> {
@@ -11,25 +12,27 @@ class Atom<T> {
     this.id = uuid();
     setState(this, value);
   }
-}
 
-function view<T>(atom: Atom<T>) {
-  return getState(atom);
-}
+  view() {
+    return view(this);
+  }
 
-function set<T>(atom: Atom<T>, value: T) {
-  const prev = view(atom);
-  setState(atom, value);
-  notify(atom, view(atom), prev);
-}
+  set(value: T) {
+    set(this, value);
+    return this;
+  }
 
-function merge<T>(atom: Atom<T>, value: Partial<T>) {
-  set(atom, Object.assign(view(atom), value));
-}
+  merge(value: Partial<T>) {
+    merge(this, value);
+    return this;
+  }
 
-function modify<T>(atom: Atom<T>, setter: (current: T) => T) {
-  const value = setter(view(atom));
-  set(atom, value);
-}
+  modify(setter: (current: T) => T) {
+    modify(this, setter);
+    return this;
+  }
 
-export { Atom, view, set, merge, modify, subscribe };
+  subscribe(cb: AtomListener<T>) {
+    return subscribe(this, cb);
+  }
+}
