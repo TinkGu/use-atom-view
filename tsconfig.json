@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "dist/ts",
+    "outDir": "dist",
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -19,8 +19,5 @@
     "removeComments": true,
     "stripInternal": true
   },
-  "exclude": [
-    "examples",
-    "dist"
-  ]
+  "exclude": ["examples", "dist"]
 }

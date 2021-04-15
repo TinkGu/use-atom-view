@@ -6,3 +6,7 @@
 - [ ] typescript doc
 - [ ] release atom
 - [ ] document
+- [ ] batch modify
+- [ ] format
+- [ ] lens
+- [ ] chaining api

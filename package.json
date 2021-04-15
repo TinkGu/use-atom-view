@@ -8,7 +8,7 @@
   "module": "dist/use-atom-view.es.js",
   "jsnext:main": "dist/use-atom-view.es.js",
   "unpkg": "dist/use-atom-view.min.js",
-  "types": "dist/ts",
+  "types": "dist",
   "sideEffects": false,
   "author": {
     "name": "TinkGu",

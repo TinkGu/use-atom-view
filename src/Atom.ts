@@ -17,7 +17,7 @@ function view<T>(atom: Atom<T>) {
   return getState(atom);
 }
 
-function set<T>(atom: Atom<T>, value: Partial<T>) {
+function set<T>(atom: Atom<T>, value: T) {
   const prev = view(atom);
   setState(atom, value);
   notify(atom, view(atom), prev);
