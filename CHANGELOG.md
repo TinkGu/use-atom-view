@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/TinkGu/use-atom-view/compare/v1.0.3...v1.1.0) (2021-04-16)
+
+
+### Features
+
+* refactor Atom for better extending, such as lensedAtom ([1110078](https://github.com/TinkGu/use-atom-view/commit/111007829533d6dac0017fa2313fb520444134f1))
+* support chaining api ([63be0a7](https://github.com/TinkGu/use-atom-view/commit/63be0a78313f2e060adbd39b5334f7ad9c4204ea))
+
 ### [1.0.3](https://github.com/TinkGu/use-atom-view/compare/v1.0.2...v1.0.3) (2021-04-15)
 
 

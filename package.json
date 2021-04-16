@@ -1,6 +1,6 @@
 {
   "name": "use-atom-view",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Yet another React state management library that with Atom",
   "license": "MIT",
   "repository": "TinkGu/use-atom-view",
