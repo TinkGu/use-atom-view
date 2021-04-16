@@ -45,6 +45,7 @@ module.exports = {
         'no-restricted-globals': 'off',
         'no-use-before-define': 'off',
         'no-plusplus': 'off',
+        'no-redeclare': 'off',
       },
     },
   ],

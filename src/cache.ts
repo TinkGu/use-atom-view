@@ -1,6 +1,4 @@
-import { Atom } from './atom';
-
-export type AtomListener<T> = (cur: T, prev: T) => any;
+import { AtomListener } from './types';
 
 let atomId = 0;
 const atomState: Record<number, any> = {};
@@ -8,20 +6,19 @@ const atomEvents: Record<number, AtomListener<any>[]> = {};
 
 export const uuid = () => atomId++;
 
-export function getState<T>(atom: Atom<T>) {
-  return atomState[atom.id] as T;
+export function getState<T>(id: number) {
+  return atomState[id] as T;
 }
 
-export function setState<T>(atom: Atom<T>, value: T) {
-  atomState[atom.id] = value;
+export function setState<T>(id: number, value: T) {
+  atomState[id] = value;
 }
 
-export function subscribe<T>(atom: Atom<T>, cb: AtomListener<T>) {
-  const aid = atom.id;
-  if (!atomEvents[atom.id]) {
-    atomEvents[aid] = [];
+export function subscribe<T>(id: number, cb: AtomListener<T>) {
+  if (!atomEvents[id]) {
+    atomEvents[id] = [];
   }
-  const events = atomEvents[atom.id];
+  const events = atomEvents[id];
   if (events.indexOf(cb) === -1) {
     events.push(cb);
   }
@@ -32,7 +29,7 @@ export function subscribe<T>(atom: Atom<T>, cb: AtomListener<T>) {
       return;
     }
     unsubscribed = true;
-    const _events = atomEvents[aid];
+    const _events = atomEvents[id];
     if (_events.length) {
       const i = _events.indexOf(cb);
       if (i !== -1) {
@@ -43,9 +40,8 @@ export function subscribe<T>(atom: Atom<T>, cb: AtomListener<T>) {
   };
 }
 
-export function notify<T>(atom: Atom<T>, cur: T, prev: T) {
-  const aid = atom.id;
-  const events = atomEvents[aid];
+export function notify<T>(id: number, cur: T, prev: T) {
+  const events = atomEvents[id];
   if (events && events.length) {
     for (let index = 0; index < events.length; index++) {
       events[index](cur, prev);

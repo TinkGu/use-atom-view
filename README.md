@@ -4,9 +4,9 @@
 
 - [ ] deep and shallow equal
 - [ ] typescript doc
-- [ ] release atom
+- [ ] release/destroy atom
 - [ ] document
 - [ ] batch modify
 - [ ] format
 - [ ] lens
-- [ ] chaining api
+- [x] chaining api
