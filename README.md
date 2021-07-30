@@ -106,7 +106,8 @@ counter.modify((x) => x + 2); // atom changed: 4, 2
 
 # Alterntive
 
-- focal
-  `use-atom-view` inspired form [focal](https://github.com/grammarly/focal)
-- jotai
+- [focal](https://github.com/grammarly/focal)<br/>
+  `use-atom-view` inspired form focal
+
+- [jotai](https://github.com/pmndrs/jotai)<br/>
   yet another Atom based state management toolkit. jotai maybe more like React, you cannot read or set atom outside the component
