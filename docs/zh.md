@@ -79,6 +79,21 @@ counter.modify((x) => x + 2);
 counter.get(); // 3
 ```
 
+## atom.merge
+
+以 merge 的形式替换 atom 中的值
+
+```typescript
+const a1 = Atom.of({ a: 1, b: 2 });
+a1.merge({ b: 3 });
+counter.get(); // { a: 1, b: 3 }
+
+// 对于值是 number 类型的 atom，调用结果和 `atom.set` 一样
+const counter = Atom.of<number>(1);
+counter.merge(2);
+counter.get(); // 2
+```
+
 ## atom.subscribe
 
 监听 atom 数据变化，执行传入的监听回调
