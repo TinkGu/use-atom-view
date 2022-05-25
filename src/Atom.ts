@@ -1,5 +1,5 @@
 import { getState, notify, setState, subscribe, uuid } from './cache';
-import { modify } from './operators';
+import { modify, merge } from './operators';
 import { BaseAtom, AtomListener } from './types';
 
 export class Atom<T> implements BaseAtom<T> {
@@ -27,6 +27,11 @@ export class Atom<T> implements BaseAtom<T> {
 
   modify(setter: (current: T) => T) {
     modify(this, setter);
+    return this;
+  }
+
+  merge(value: Partial<T>) {
+    merge(this, value);
     return this;
   }
 
