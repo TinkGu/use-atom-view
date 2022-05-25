@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/TinkGu/use-atom-view/compare/v1.1.0...v1.2.0) (2022-05-25)
+
+
+### Features
+
+* add new api: `atom.merge` ([805d89a](https://github.com/TinkGu/use-atom-view/commit/805d89a5671e3b0603c3928d7d60fda938f4e87a))
+
 ## [1.1.0](https://github.com/TinkGu/use-atom-view/compare/v1.0.3...v1.1.0) (2021-04-16)
 
 
