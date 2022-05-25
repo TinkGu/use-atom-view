@@ -96,7 +96,7 @@ receive the partial value and merge it to the original value, reset this final v
 ```typescript
 const a1 = Atom.of({ a: 1, b: 2 });
 a1.merge({ b: 3 });
-counter.get(); // { a: 1, b: 3 }
+a1.get(); // { a: 1, b: 3 }
 
 // for the atom of number type, it will fallback to `atom.set`
 const counter = Atom.of<number>(1);

@@ -86,7 +86,7 @@ counter.get(); // 3
 ```typescript
 const a1 = Atom.of({ a: 1, b: 2 });
 a1.merge({ b: 3 });
-counter.get(); // { a: 1, b: 3 }
+a1.get(); // { a: 1, b: 3 }
 
 // 对于值是 number 类型的 atom，调用结果和 `atom.set` 一样
 const counter = Atom.of<number>(1);
