@@ -80,3 +80,5 @@ typings/
 
 # published transpiled code
 dist
+
+AGENTS.md
