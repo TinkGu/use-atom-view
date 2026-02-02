@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import TestRenderer from 'react-test-renderer';
-import { Atom, useAtomView } from 'use-atom-view';
+import { Atom, useAtomView } from '../src/use-atom-view';
 
 const { act } = TestRenderer;
 

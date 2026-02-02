@@ -73,7 +73,7 @@ function identical(a: any, b: any) {
   return a !== a && b !== b;
 }
 
-const _isArguments = (function () {
+const _isArguments = (function __isArguments() {
   // eslint-disable-next-line prefer-destructuring
   const toString = Object.prototype.toString;
 
@@ -95,7 +95,7 @@ const _isArguments = (function () {
  * Note that the order of the output array is not guaranteed to be consistent
  * across different JS platforms.
  */
-const keys = (function () {
+const keys = (function __keys() {
   // cover IE < 9 keys issues
   // eslint-disable-next-line no-prototype-builtins
   const hasEnumBug = !{ toString: null }.propertyIsEnumerable('toString');
@@ -111,7 +111,7 @@ const keys = (function () {
   ];
 
   // Safari bug
-  const hasArgsEnumBug = (function () {
+  const hasArgsEnumBug = (function _hasArgsEnumBug() {
     // eslint-disable-next-line strict, lines-around-directive
     ('use strict');
 
