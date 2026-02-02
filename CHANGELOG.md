@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/TinkGu/use-atom-view/compare/v1.2.1...v1.3.0) (2026-02-02)
+
+
+### Features
+
+* add useSyncExternalStore and integration tests ([a9f1a9c](https://github.com/TinkGu/use-atom-view/commit/a9f1a9c03898a1214e932f61bb008bd990de7070))
+
 ### [1.2.1](https://github.com/TinkGu/use-atom-view/compare/v1.2.0...v1.2.1) (2023-04-10)
 
 ## [1.2.0](https://github.com/TinkGu/use-atom-view/compare/v1.1.0...v1.2.0) (2022-05-25)
